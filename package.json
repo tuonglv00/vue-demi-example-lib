@@ -1,7 +1,7 @@
 {
   "name": "vue-demi-example-lib",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.0.1",
+  "private": false,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -35,9 +35,21 @@
     "npm-run-all2": "^6.2.0",
     "typescript": "~5.4.0",
     "vite": "^5.3.1",
-    "vue-tsc": "^2.0.21",
     "vite-plugin-dts": "^4.0.3",
     "vite-plugin-lib-inject-css": "^2.1.1",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue-tsc": "^2.0.21"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-demi-example-lib.umd.cjs",
+  "module": "./dist/vue-demi-example-lib.js",
+  "types": "./dist/src/components/index.d.ts",
+  "export": {
+    ".": {
+      "import": "./dist/vue-demi-example-lib.js",
+      "require": "./dist/vue-demi-example-lib.umd.cjs"
+    }
   }
 }

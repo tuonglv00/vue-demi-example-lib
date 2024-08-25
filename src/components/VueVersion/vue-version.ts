@@ -1,8 +1,9 @@
 import { h, defineComponent, ref, isVue2, isVue3 } from "vue-demi";
-import type { Component } from "vue-demi";
 import vueVersionStyles from "./vue-version.module.css";
 
-export const VueVersion: Component = defineComponent({
+export type VueVersion = typeof VueVersion;
+
+export const VueVersion = defineComponent({
   name: "VueVersion",
   setup() {
     const vueVersion = ref(0);

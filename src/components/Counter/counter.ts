@@ -1,7 +1,7 @@
-import { h, defineComponent, ref, type Component } from "vue-demi";
+import { h, defineComponent, ref } from "vue-demi";
 import counterStyles from "./counter.module.css";
 
-export type CounterComponent = typeof Counter;
+export type Counter = typeof Counter;
 
 export const Counter = defineComponent({
   name: "Counter",
